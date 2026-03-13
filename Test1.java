@@ -1,40 +1,32 @@
-package lamdaExp;
+package com.dss;
 
-interface it{
-	void disp();
-}
-
-interface   it1{
-	String disp(int a);
-}
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 
 public class Test1 {
 
+//	public linkedHashSetImplementtaion(String empName, int empId) {
+//		super(empName, empId);
+//		// TODO Auto-generated constructor stub
+//	}
+//	
+	
+
+	
+
 	public static void main(String[] args) {
-		it i1= new it() {
-			public void disp() {
-				System.out.println("This is annonymous class...");
-			};
-		};
-		i1.disp();
 		
+		LinkedHashSet<Employee> al =new LinkedHashSet<Employee>();
+		al.add(new Employee("arpita", 111));
+		al.add(new Employee("satya", 345));
+		al.add(new Employee("arpita", 111));
 		
-		it i2= () ->{
-			System.out.println("this is lamda1...");
-			System.out.println("this is lamda2...");
-		};
-		i2.disp();
-	
-	
-	
-	
-	// now lamda expression with some arguments:
-	
-	it1 it11= (a) -> {
-		System.out.println("the name of String is good morning");
-		return "done";
-	  };
-	  String str= it11.disp(100);
-	  System.out.println("the string is " +str);
+		Iterator<Employee> itr = al.iterator();
+		
+		while(itr.hasNext()) {
+			Employee e= itr.next();
+			System.out.println(e.empId +" "+ e.empName);
+		}
 	}
+
 }

@@ -1,0 +1,18 @@
+package com.thinkconstructive.restdemo;
+
+import com.thinkconstructive.restdemo.service.impl.PostalServiceImpl;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+
+@SpringBootApplication
+@ComponentScan(basePackages = {"com.thinkconstructive.restdemo"},
+		excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "com/thinkconstructive/restdemo/Post*"))
+public class RestDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RestDemoApplication.class, args);
+	}
+
+}

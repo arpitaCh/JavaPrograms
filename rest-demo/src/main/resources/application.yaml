@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: rest-demo
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://workbench-devdb.us-central1.us.walmart.net:3306/airflow?enabledTLSProtocols=TLSv1.2
+    username: DMW
+    password: 61Y3Q&sDG58v
+
+  jpa.hibernate.ddl_auto: create
